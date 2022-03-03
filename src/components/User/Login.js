@@ -12,6 +12,13 @@ class Login extends Component {
     }
   }
 
+  componentDidMount(){
+    axios.get('http://localhost:8000/user')
+         .then(response =>{
+           console.log(response.data);
+         })
+  }
+
   // handle username input
   handleUsernameInputChange = (event) =>{
     this.setState({
@@ -65,7 +72,7 @@ class Login extends Component {
           password: '',
           profession: ''
          })
-         
+
         //  window.location = '/'
   }
 
