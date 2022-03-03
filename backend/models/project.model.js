@@ -7,5 +7,5 @@ const projectSchema = mongoose.Schema({
   repo: String
 });
 
-const Project = mongoose.model('User', projectSchema);
+const Project = mongoose.model('Project', projectSchema);
 module.exports = Project;
