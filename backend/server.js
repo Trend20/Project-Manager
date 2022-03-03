@@ -7,19 +7,9 @@ const projectRoute = require('./routes/project');
 
 const app = express();
 
-// use middleware
-app.use(cors());
-app.use(express.json());
+require('dotenv').config();
 
-
-// ROUTES
-
-app.use('/user', userRoute);
-app.use('/project', projectRoute);
-
-const PORT = process.env.PORT || 8000;
-
-const url = process.env.DATABASE_URI;
+const url = process.env.DATABASE_URL;
 mongoose.connect(url);
 
 const connection = mongoose.connection;
@@ -27,6 +17,17 @@ const connection = mongoose.connection;
 connection.once('open', () =>{
   console.log('Application connected to the DB!!');
 })
+
+// use middleware
+app.use(cors());
+app.use(express.json());
+
+// ROUTES
+app.use('/user', userRoute);
+app.use('/project', projectRoute);
+
+
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () =>{
   console.log(`Application listening on port ${PORT}`);
