@@ -10,14 +10,14 @@ router.route('/').get((req, res) =>{
       .catch(error => res.status(400).json('Error ' + error))
 });
 
-// get a specific user using id
+// get a specific project using id
 router.route('/:id').get((req, res) =>{
   Project.findById(req.params.id)
       .then((project) =>res.json(project))
       .catch(error => res.status(400).json('Error ' + error))
 });
 
-// add user
+// add project
 router.route('/add').post((req, res) =>{
   const name = req.body.name;
   const url = req.body.url;
@@ -41,7 +41,7 @@ router.route('/update/:id').post((req, res) =>{
         project.repo = req.body.repo
 
         project.save()
-            .then(() => res.json('User updated!!'))
+            .then(() => res.json('Project updated!!'))
             .catch(error => res.status(400).json('Error ' + error))
       }).catch(error => res.status(400).json('Error ' + error))
 });
