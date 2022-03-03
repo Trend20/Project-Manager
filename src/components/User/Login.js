@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { Component } from 'react';
 
 class Login extends Component {
@@ -46,8 +47,26 @@ class Login extends Component {
     event.preventDefault();
 
     const newUser = {
-      
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password,
+      profession: this.state.profession
     }
+
+    console.log(newUser);
+
+    axios.post('http://localhost:8000/user/add', newUser)
+         .then(res => console.log(res.data))
+
+    
+         this.setState({
+          username: '',
+          email: '',
+          password: '',
+          profession: ''
+         })
+         
+        //  window.location = '/'
   }
 
 
