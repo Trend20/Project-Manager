@@ -7,7 +7,6 @@ class ProjectDetails extends Component {
     super(props)
     this.state={
       projects: []
-      // this.props.projects
     }
   }
 
@@ -24,14 +23,18 @@ class ProjectDetails extends Component {
     return (
       <div className='mt-3'>
         <h1>Project List</h1>
-
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+        {
+          this.state.projects.map(project =>
+            <div class="card mt-3">
+            <div class="card-body">
+            <h5 class="card-title">{project.name}</h5>
+            <p><a href="#">{project.url}</a></p>
+            <p> <a href="#">{project.repo}</a></p>
+            <p class="card-text">{project.type}</p>
           </div>
         </div>
+        )
+        }
       </div>
     );
   }
