@@ -6,7 +6,8 @@ class ProjectDetails extends Component {
   constructor(props){
     super(props)
     this.state={
-      projects: [this.props.projects]
+      projects: []
+      // this.props.projects
     }
   }
 
@@ -16,9 +17,8 @@ class ProjectDetails extends Component {
             this.setState({
               projects: response.data
             })
+            console.log(this.state.projects);
           }).catch(error =>console.log(error))
-
-          console.log(this.state.projects);
   }
   render() {
     return (
