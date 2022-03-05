@@ -83,7 +83,7 @@ class Login extends Component {
       <form onSubmit={this.onFormSubmission}>
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
-          <input type="username" value={this.state.username} onChange={this.handleUsernameInputChange} class="form-control" id="username" />
+          <input type="text" value={this.state.username} onChange={this.handleUsernameInputChange} class="form-control" id="username" />
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
@@ -95,7 +95,7 @@ class Login extends Component {
         </div>
         <div class="mb-3">
           <label for="profession" class="form-label">Profession</label>
-          <input type="profession" value={this.state.profession} onChange={this.handleProfessionInputChange} class="form-control" id="profession" />
+          <input type="text" value={this.state.profession} onChange={this.handleProfessionInputChange} class="form-control" id="profession" />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
