@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ProjectDetails from '../ProjectDetails/ProjectDetails';
 
 class Project extends Component {
   constructor(props){
@@ -8,7 +9,8 @@ class Project extends Component {
       name: '',
       url: '',
       type: '',
-      repo: ''
+      repo: '',
+      projects:[]
     }
   }
 
@@ -93,6 +95,8 @@ class Project extends Component {
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+      <ProjectDetails />
       </div>
     );
   }
