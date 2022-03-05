@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ProjectDetails from '../ProjectDetails/ProjectDetails';
 
 class Project extends Component {
   constructor(props){
@@ -8,7 +9,8 @@ class Project extends Component {
       name: '',
       url: '',
       type: '',
-      repo: ''
+      repo: '',
+      projects:[]
     }
   }
 
@@ -59,7 +61,11 @@ class Project extends Component {
     console.log(newProject);
 
     axios.post('http://localhost:8000/project/add', newProject)
-         .then(res => console.log(res.data))
+         .then((response) =>{
+           this.setState({
+             projects: response.data
+           })
+        })
          
          this.setState({
           name: '',
@@ -93,6 +99,8 @@ class Project extends Component {
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+      <ProjectDetails projects={this.state.projects}/>
       </div>
     );
   }
