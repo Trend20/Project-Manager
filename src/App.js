@@ -1,12 +1,18 @@
-import './App.css';
+import Project from './components/Project/Project';
 import Login from './components/User/Login';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="container">
+   <Router>
+      <div className="container">
       <h1>Project Manager</h1>
-      <Login />
+      <Routes>
+         <Route path="/" element={<Login />} />
+         <Route path="/project" element={<Project />} />
+      </Routes>
     </div>
+   </Router>
   );
 }
 
