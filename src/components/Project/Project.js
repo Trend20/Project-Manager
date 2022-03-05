@@ -61,7 +61,11 @@ class Project extends Component {
     console.log(newProject);
 
     axios.post('http://localhost:8000/project/add', newProject)
-         .then(res => console.log(res.data))
+         .then((response) =>{
+           this.setState({
+             projects: response.data
+           })
+        })
          
          this.setState({
           name: '',
@@ -96,7 +100,7 @@ class Project extends Component {
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
 
-      <ProjectDetails />
+      <ProjectDetails projects={this.state.projects}/>
       </div>
     );
   }

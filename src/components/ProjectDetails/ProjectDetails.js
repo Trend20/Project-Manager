@@ -6,7 +6,7 @@ class ProjectDetails extends Component {
   constructor(props){
     super(props)
     this.state={
-      projects: []
+      projects: [this.props.projects]
     }
   }
 
@@ -22,8 +22,16 @@ class ProjectDetails extends Component {
   }
   render() {
     return (
-      <div>
+      <div className='mt-3'>
         <h1>Project List</h1>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
       </div>
     );
   }
