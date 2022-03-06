@@ -97,7 +97,7 @@ class Project extends Component {
           <label for="repo" class="form-label">Project Repo</label>
           <input type="text" value={this.state.repo} onChange={this.handleRepoInputChange} class="form-control" id="repo" />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Add Project</button>
       </form>
 
       <ProjectDetails projects={this.state.projects}/>
