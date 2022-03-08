@@ -73,8 +73,6 @@ class Project extends Component {
           type: '',
           repo: ''
          })
-
-        //  window.location = '/'
   }
 
   render() {

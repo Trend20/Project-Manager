@@ -73,7 +73,7 @@ class Login extends Component {
           profession: ''
          })
 
-         window.location ="/project"
+         window.location ="/projects"
   }
 
 

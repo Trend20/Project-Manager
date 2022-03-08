@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class Register extends Component {
   constructor(props){
@@ -98,7 +99,7 @@ class Register extends Component {
           <input type="text" value={this.state.profession} onChange={this.handleProfessionInputChange} class="form-control" id="profession" />
         </div>
         <button type="submit" class="btn btn-primary">Register</button>
-        <button type="submit" class="btn btn-primary ml-3">Login</button>
+        <Link to="/login" id='login' class="btn btn-primary">Login</Link>
       </form>
     </div>
     );
