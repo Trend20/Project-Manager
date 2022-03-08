@@ -1,12 +1,15 @@
 import axios from 'axios';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
-class Login extends Component {
+class Register extends Component {
   constructor(props){
     super(props)
     this.state ={
+      username: '',
       email: '',
       password: '',
+      profession: ''
     }
   }
 
@@ -15,6 +18,13 @@ class Login extends Component {
          .then(response =>{
            console.log(response.data);
          })
+  }
+
+  // handle username input
+  handleUsernameInputChange = (event) =>{
+    this.setState({
+      username: event.target.value
+    })
   }
 
   // handle email input
@@ -31,6 +41,13 @@ class Login extends Component {
     })
   }
 
+  // handle profession input
+  handleProfessionInputChange = (event) =>{
+    this.setState({
+      profession: event.target.value
+    })
+  }
+
 
   // handle form submission
   onFormSubmission = (event) =>{
@@ -38,8 +55,10 @@ class Login extends Component {
     event.preventDefault();
 
     const newUser = {
+      username: this.state.username,
       email: this.state.email,
       password: this.state.password,
+      profession: this.state.profession
     }
 
     console.log(newUser);
@@ -49,18 +68,24 @@ class Login extends Component {
 
     
          this.setState({
+          username: '',
           email: '',
           password: '',
+          profession: ''
          })
 
-         window.location ="/projects"
+         window.location ="/register"
   }
 
 
   render() {
     return (
-      <div className='login'>
+      <div className='register'>
       <form onSubmit={this.onFormSubmission}>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" value={this.state.username} onChange={this.handleUsernameInputChange} class="form-control" id="username" />
+        </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
           <input type="email" value={this.state.email} onChange={this.handleEmailInputChange} class="form-control" id="email" />
@@ -69,11 +94,16 @@ class Login extends Component {
           <label for="password" class="form-label">Password</label>
           <input type="password" value={this.state.password} onChange={this.handlePasswordInputChange} class="form-control" id="password" />
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <div class="mb-3">
+          <label for="profession" class="form-label">Profession</label>
+          <input type="text" value={this.state.profession} onChange={this.handleProfessionInputChange} class="form-control" id="profession" />
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <Link to="/login" id='login' class="btn btn-primary">Login</Link>
       </form>
     </div>
     );
   }
 }
 
-export default Login;
+export default Register;
