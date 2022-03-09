@@ -65,7 +65,7 @@ class Project extends Component {
            this.setState({
              projects: response.data
            })
-        })
+        }).catch(error => console.log('Error ' + error))
          
          this.setState({
           name: '',
@@ -78,6 +78,7 @@ class Project extends Component {
   render() {
     return (
       <div className='project'>
+        <p className='mt-5'><b>Add your completed project by providing details below!!</b></p>
         <form onSubmit={this.onFormSubmission}>
         <div class="mb-3">
           <label for="name" class="form-label">Project Name</label>

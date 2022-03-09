@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import '../../App.css'
 
 class Register extends Component {
   constructor(props){
@@ -81,6 +82,7 @@ class Register extends Component {
   render() {
     return (
       <div className='register'>
+        <p className='mt-5'>Register to start using <b>Manager</b>.</p>
       <form onSubmit={this.onFormSubmission}>
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
@@ -102,7 +104,7 @@ class Register extends Component {
           <input type="password" value={this.state.password} onChange={this.handlePasswordInputChange} class="form-control" id="password" 
           required
           maxLength={10} minLength={8} 
-          pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/"
+          // pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/"
           />
         </div>
         <div class="mb-3">
@@ -113,8 +115,9 @@ class Register extends Component {
           minLength={4}
           />
         </div>
-        <button type="submit" class="btn btn-primary">Register</button>
-        <Link to="/login" id='login' class="btn btn-primary">Login</Link>
+        <button type="submit" class="btn btn-primary">Register</button> <b>OR</b>
+        {/* <Link to="/login" id='login' class="btn btn-primary">Login</Link> */}
+        <p className='mt-3'>You can also <Link to="/login">Login</Link> if you already have an account.</p>
       </form>
     </div>
     );

@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom'
 class Navbar extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
-        <div class="container-fluid">
-          <Link class="navbar-brand" to="/">Manager</Link>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+        <div className="container-fluid">
+          <Link className="navbar-brand ml-5" to="/">Manager</Link>
           {/* <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button> */}
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <Link class="nav-link active" to="/">Register</Link>
+        {/* <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link active" to="/">Register</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link active" aria-current="page" to="/projects">Projects</Link>
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/projects">Projects</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link active" to="/login">Logout</Link>
+            <li className="nav-item">
+              <Link className="nav-link active" to="/login">Logout</Link>
             </li>
           </ul>
-          </div>
+          </div> */}
         </div>
       </nav>
     );

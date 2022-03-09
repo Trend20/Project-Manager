@@ -60,6 +60,7 @@ class Login extends Component {
   render() {
     return (
       <div className='login'>
+        <p className='mt-5'>Login to start using <b>Manager</b>.</p>
       <form onSubmit={this.onFormSubmission}>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
