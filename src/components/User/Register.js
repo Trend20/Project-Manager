@@ -74,7 +74,7 @@ class Register extends Component {
           profession: ''
          })
 
-         window.location ="/register"
+         window.location ="/projects"
   }
 
 
@@ -84,19 +84,34 @@ class Register extends Component {
       <form onSubmit={this.onFormSubmission}>
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
-          <input type="text" value={this.state.username} onChange={this.handleUsernameInputChange} class="form-control" id="username" />
+          <input type="text" value={this.state.username} onChange={this.handleUsernameInputChange} class="form-control" id="username"  
+          required
+          maxLength={12}
+          minLength={4}
+          />
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" value={this.state.email} onChange={this.handleEmailInputChange} class="form-control" id="email" />
+          <input type="email" value={this.state.email} onChange={this.handleEmailInputChange} class="form-control" id="email" 
+          required
+          // pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
+          />
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" value={this.state.password} onChange={this.handlePasswordInputChange} class="form-control" id="password" />
+          <input type="password" value={this.state.password} onChange={this.handlePasswordInputChange} class="form-control" id="password" 
+          required
+          maxLength={10} minLength={8} 
+          pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/"
+          />
         </div>
         <div class="mb-3">
           <label for="profession" class="form-label">Profession</label>
-          <input type="text" value={this.state.profession} onChange={this.handleProfessionInputChange} class="form-control" id="profession" />
+          <input type="text" value={this.state.profession} onChange={this.handleProfessionInputChange} class="form-control" id="profession" 
+          required
+          maxLength={20}
+          minLength={4}
+          />
         </div>
         <button type="submit" class="btn btn-primary">Register</button>
         <Link to="/login" id='login' class="btn btn-primary">Login</Link>

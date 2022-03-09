@@ -63,11 +63,13 @@ class Login extends Component {
       <form onSubmit={this.onFormSubmission}>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" value={this.state.email} onChange={this.handleEmailInputChange} class="form-control" id="email" />
+          <input type="email" value={this.state.email} onChange={this.handleEmailInputChange} class="form-control" id="email" required/>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" value={this.state.password} onChange={this.handlePasswordInputChange} class="form-control" id="password" />
+          <input type="password" value={this.state.password} onChange={this.handlePasswordInputChange} class="form-control" id="password" required
+          maxLength={10} minLength={8}
+          />
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
       </form>
