@@ -16,6 +16,7 @@ class ProjectDetails extends Component {
             this.setState({
               projects: response.data
             })
+            this.props.updateProjectList();
             console.log(this.state.projects);
           }).catch(error =>console.log(error))
   }
