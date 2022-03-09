@@ -8,8 +8,11 @@ function App() {
   return (
    <Router>
      <Navbar />
-      <div className="container">
-      <h1>Project Manager</h1>
+      <div className="container mt-5">
+      <div className="header mt-3">
+        <h3>Welcome to Manager!!</h3>
+        <p><b>Manager</b> is a web application that helps you manage your projects. It will help you keep track of all your completed project.</p>
+        </div>
       <Routes>
          <Route path="/" element={<Register />} />
          <Route path="/login" element={<Login />} />
