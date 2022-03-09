@@ -12,6 +12,8 @@ class Project extends Component {
       repo: '',
       projects:[]
     }
+
+    this.updateProjectList = this.updateProjectList.bind(this);
   }
 
   updateProjectList = () =>{
@@ -67,7 +69,6 @@ class Project extends Component {
       type: this.state.type,
       repo: this.state.repo
     }
-
     console.log(newProject);
 
     axios.post('http://localhost:8000/project/add', newProject)
@@ -83,8 +84,6 @@ class Project extends Component {
           type: '',
           repo: ''
          })
-
-         this.updateProjectList();
   }
 
   render() {
