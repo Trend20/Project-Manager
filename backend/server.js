@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
 
 const userRoute = require('./routes/user');
 const projectRoute = require('./routes/project');
@@ -17,8 +18,16 @@ connection.once('open', () =>{
 })
 
 // use middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:8000",
+    // "https://mern-auth-template-tutorial.netlify.app",
+  ],
+  credentials: true,
+}));
 app.use(express.json());
+app.use(cookieParser())
+
 
 // ROUTES
 app.use('/user', userRoute);
