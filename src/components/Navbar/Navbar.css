@@ -31,3 +31,26 @@
   align-items: center;
   width: 40%;
 }
+
+.nav-container li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+  width: 100%;
+  padding: 18px;
+}
+
+.active {
+  background: rgb(9, 107, 219);
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 50%;
+}
+
+.active:hover {
+  color: #fff;
+}

@@ -13,14 +13,14 @@ class Navbar extends Component {
         <div id="navbarNav">
           <ul className="nav-container">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/projects">Projects</Link>
+              <Link className="nav-link" aria-current="page" to="/projects">Projects</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/">Register</Link>
+              <Link className="active" to="/">Register</Link>
             </li>
             
             <li className="nav-item">
-              <Link className="nav-link active" to="/login">Logout</Link>
+              <Link className="active" to="/login">Login</Link>
             </li>
           </ul>
           </div>
