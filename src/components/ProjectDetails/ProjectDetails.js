@@ -30,10 +30,10 @@ class ProjectDetails extends Component {
           this.state.projects.map(project =>
             <div class="card mt-3">
             <div class="card-body">
-            <h5 class="card-title">{project.name}</h5>
-            <p><Link to="{project.url}">{project.url}</Link></p>
-            <p><Link to="{project.repo}">{project.repo}</Link></p>
-            <p class="card-text">{project.type}</p>
+            <p class="card-title"><span>Project Name:</span>{project.name}</p>
+            <p><span>Project Url:</span> <Link to="{project.url}">{project.url}</Link></p>
+            <p><span>Project Repo:</span> <Link to="{project.repo}">{project.repo}</Link></p>
+            <p class="card-text"><span>Project Type:</span> {project.type}</p>
           </div>
         </div>
         )
