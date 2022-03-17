@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 
 class ProjectDetails extends Component {
 
@@ -19,22 +20,25 @@ class ProjectDetails extends Component {
             this.props.updateProjectList();
           }).catch(error =>console.log(error))
   }
+  
   render() {
     return (
-      <div className='mt-3'>
+      <div className='mt-5'>
         <h1>Project List</h1>
-        {
+       <div className='project-container'>
+       {
           this.state.projects.map(project =>
             <div class="card mt-3">
             <div class="card-body">
-            <h5 class="card-title">{project.name}</h5>
-            <p><a href="#">{project.url}</a></p>
-            <p> <a href="#">{project.repo}</a></p>
-            <p class="card-text">{project.type}</p>
+            <p class="card-title"><span>Project Name:</span>{project.name}</p>
+            <p><span>Project Url:</span> <Link to="{project.url}">{project.url}</Link></p>
+            <p><span>Project Repo:</span> <Link to="{project.repo}">{project.repo}</Link></p>
+            <p class="card-text"><span>Project Type:</span> {project.type}</p>
           </div>
         </div>
         )
         }
+       </div>
       </div>
     );
   }
