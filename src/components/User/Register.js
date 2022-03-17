@@ -114,7 +114,6 @@ class Register extends Component {
           />
         </div>
         <button type="submit" class="btn btn-primary">Register</button> <b>OR</b>
-        {/* <Link to="/login" id='login' class="btn btn-primary">Login</Link> */}
         <p className='mt-3'>You can also <Link to="/login">Login</Link> if you already have an account.</p>
       </form>
     </div>
