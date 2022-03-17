@@ -96,15 +96,6 @@ class Register extends Component {
           <label for="email" class="form-label">Email</label>
           <input type="email" value={this.state.email} onChange={this.handleEmailInputChange} class="form-control" id="email" 
           required
-          // pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'
-          />
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" value={this.state.password} onChange={this.handlePasswordInputChange} class="form-control" id="password" 
-          required
-          maxLength={10} minLength={8} 
-          // pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/"
           />
         </div>
         <div class="mb-3">
@@ -113,6 +104,13 @@ class Register extends Component {
           required
           maxLength={20}
           minLength={4}
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" value={this.state.password} onChange={this.handlePasswordInputChange} class="form-control" id="password" 
+          required
+          maxLength={10} minLength={8} 
           />
         </div>
         <button type="submit" class="btn btn-primary">Register</button> <b>OR</b>
