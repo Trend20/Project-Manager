@@ -8,13 +8,13 @@ const projectRoute = require('./routes/project');
 const app = express();
 
 require('dotenv').config();
-const url = process.env.DATABASE_URL;
+const url = process.env.DB_URL;
 mongoose.connect(url);
 const connection = mongoose.connection;
 
 connection.once('open', () =>{
   console.log('Application connected to the DB!!');
-})
+});
 
 // use middleware
 app.use(cors());
