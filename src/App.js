@@ -11,7 +11,7 @@ function App() {
       <div className="container mt-5">
       <div className="header mt-3">
         <h3>Welcome to Manager!!</h3>
-        <p><b>Manager</b> is a web application that helps you manage your projects. It will help you keep track of all your completed project.</p>
+        <p><b>Manager</b> is a web application that helps you manage your projects. It will help you keep track of all your completed projects.</p>
         </div>
       <Routes>
          <Route path="/" element={<Register />} />
