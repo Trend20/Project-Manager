@@ -31,7 +31,7 @@ span{
   font-weight: 500;
   width: 20%;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 30px;
   font-size: 1rem;
   background-color: rgb(33, 160, 245);
   cursor: pointer;
@@ -54,5 +54,5 @@ span{
   display: flex;
   margin: auto;
   width: 40%;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
