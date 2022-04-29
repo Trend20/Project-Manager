@@ -3,11 +3,13 @@ import Login from './components/User/Login';
 import Register from './components/User/Register';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
 
 function App() {
   return (
    <Router>
      <Navbar />
+     <Hero />
       <div className="container mt-5">
       {/* <div className="header mt-3">
         <h3>Welcome to Manager!!</h3>

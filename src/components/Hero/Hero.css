@@ -1,0 +1,43 @@
+.hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.hero h3{
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: .5;
+}
+
+.hero h1{
+  font-size: 3rem;
+}
+
+span{
+  opacity: .5;
+}
+
+.google-btn{
+  display: flex;
+  padding: 18px;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  width: 20%;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 1.5rem;
+  background-color: rgb(69, 176, 247);
+  cursor: pointer;
+}
+
+.email-link{
+  margin-top: 20px;
+  color: rgb(69, 176, 247);
+}
