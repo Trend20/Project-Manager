@@ -1,6 +1,55 @@
 header {
   display: flex;
-  width: 100%;
+  width: 80%;
+  margin: auto;
   align-items: center;
   justify-content: space-between;
+  padding: 20px;
+}
+
+.logo{
+  width: 20%;
+  align-items: center;
+}
+
+.navbar{
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar ul{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li{
+  display: flex;
+  list-style: none;
+  padding-left: 40px;
+  text-decoration: none;
+}
+.link{
+  display: flex;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#signup{
+  display: flex;
+  background: rgb(51, 148, 233);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border-radius: 50px;
+  outline: none;
+}
+
+.logo-text{
+  display: flex;
+  text-decoration: none;
+  font-weight: 700;
 }

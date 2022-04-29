@@ -7,15 +7,15 @@ class Navbar extends Component {
     return (
       <header>
         <div className="logo">
-          <h1>Manager</h1>
+          <Link to="/" className='logo-text'>Manager</Link>
         </div>
         <nav className='navbar'>
           <ul>
             <li>
-              <Link to="/login">Log In</Link>
+              <Link to="/login" className='link'>Log In</Link>
             </li>
             <li>
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/register" className='link' id="signup">Sign Up</Link>
             </li>
           </ul>
         </nav>
