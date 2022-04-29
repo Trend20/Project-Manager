@@ -20,27 +20,31 @@ header {
 }
 
 .navbar ul{
-  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  width: 40%;
 }
 
 .navbar ul li{
   display: flex;
   list-style: none;
-  padding-left: 40px;
+  padding-left: 10px;
+  width: 100%;
   text-decoration: none;
+  align-items: center;
+  justify-content: center;
 }
 .link{
   display: flex;
   text-decoration: none;
   font-weight: 700;
+  align-items: center;
+  justify-content: center;
 }
 
 #signup{
   display: flex;
-  background: rgb(69, 176, 247);
+  background: rgb(33, 160, 245);
   color: #fff;
   padding: 10px;
   width: 100%;
@@ -52,4 +56,12 @@ header {
   display: flex;
   text-decoration: none;
   font-weight: 700;
+  width: 100%;
+}
+
+.logo-text img{
+  max-width: 100%;
+  background-color: none;
+  border-radius: 50%;
+  padding: 10px;
 }

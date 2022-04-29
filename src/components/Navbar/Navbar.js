@@ -7,7 +7,9 @@ class Navbar extends Component {
     return (
       <header>
         <div className="logo">
-          <Link to="/" className='logo-text'>Manager</Link>
+          <Link to="/" className='logo-text'>
+            <img src="logo3.png" alt="logo" />
+          </Link>
         </div>
         <nav className='navbar'>
           <ul>
