@@ -1,0 +1,58 @@
+.hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.hero h3{
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: .5;
+}
+
+.hero h1{
+  font-size: 3rem;
+}
+
+span{
+  opacity: .5;
+}
+
+.google-btn{
+  display: flex;
+  padding: 18px;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 500;
+  width: 20%;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 1rem;
+  background-color: rgb(33, 160, 245);
+  cursor: pointer;
+}
+
+.email-link{
+  margin-top: 20px;
+  color: rgb(33, 160, 245);
+}
+
+.image{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.image img{
+  display: flex;
+  margin: auto;
+  width: 40%;
+  padding-bottom: 30px;
+}
