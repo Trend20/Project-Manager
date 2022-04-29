@@ -9,12 +9,12 @@ function App() {
    <Router>
      <Navbar />
       <div className="container mt-5">
-      <div className="header mt-3">
+      {/* <div className="header mt-3">
         <h3>Welcome to Manager!!</h3>
         <p><b>Manager</b> is a web application that helps you manage your projects. It will help you keep track of all your completed projects.</p>
-        </div>
+        </div> */}
       <Routes>
-         <Route path="/" element={<Register />} />
+         <Route path="/register" element={<Register />} />
          <Route path="/login" element={<Login />} />
          <Route path="/projects" element={<Project />} />
       </Routes>
