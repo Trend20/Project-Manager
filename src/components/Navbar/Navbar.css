@@ -1,10 +1,9 @@
 header {
   display: flex;
-  width: 80%;
+  width: 100%;
   margin: auto;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
 }
 
 .logo{
@@ -34,6 +33,24 @@ header {
   text-decoration: none;
   align-items: center;
   justify-content: center;
+}
+.nav-link{
+  display: flex;
+  text-decoration: none;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  color: rgb(33, 160, 245);
+}
+
+#signup{
+  display: flex;
+  background: rgb(33, 160, 245);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border-radius: 50px;
+  outline: none;
 }
 
 .logo-text{
