@@ -41,7 +41,6 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password,
     }
-
     console.log(newUser);
 
     axios.post('http://localhost:8000/user/add', newUser)
