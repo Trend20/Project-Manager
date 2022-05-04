@@ -14,10 +14,10 @@ class Navbar extends Component {
         <nav className='navbar'>
           <ul>
             <li>
-              <Link to="/login" className='link'>Log In</Link>
+              <Link to="/login" className='link btn btn-primary'>Log In</Link>
             </li>
             <li>
-              <Link to="/register" className='link' id="signup">Sign Up</Link>
+              <Link to="/register" className='link btn btn-primary' id="signup">Sign Up</Link>
             </li>
           </ul>
         </nav>
