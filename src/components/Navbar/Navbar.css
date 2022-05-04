@@ -1,10 +1,9 @@
 header {
   display: flex;
-  width: 80%;
+  width: 100%;
   margin: auto;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
 }
 
 .logo{
@@ -14,15 +13,16 @@ header {
 
 .navbar{
   display: flex;
-  width: 40%;
+  width: 50%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .navbar ul{
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 50%;
+  justify-content: space-around;
 }
 
 .navbar ul li{
@@ -34,7 +34,7 @@ header {
   align-items: center;
   justify-content: center;
 }
-.link{
+.nav-link{
   display: flex;
   text-decoration: none;
   font-weight: 700;
